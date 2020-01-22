@@ -1,0 +1,8 @@
+.type {
+    width: 28px;
+}
+
+.types{
+    display: flex;
+    justify-content: center;
+}

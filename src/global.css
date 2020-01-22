@@ -18,7 +18,7 @@
     border-radius: 5px 5px 0 0;
 }
 
-.main-conteiner ul li img{
+.main-conteiner ul li .pokemon{
     max-width: 50%;
     display: flex;
     margin: 5% 0% 5% 25%;
