@@ -1,13 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Pokedex first generation</h1>
+<br />
 
-## Available Scripts
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-In the project directory, you can run:
+## :rocket: Technologies
 
-### `yarn start`
+This project was developed at the Semana Omnistack 10 with the following technologies:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-  [ReactJS](https://reactjs.org/)
+-  [Axios](https://github.com/axios/axios)
+-  [VS Code][vc]
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ ## :information_source: How To Use
+ 
+ ```bash
+ # Clone this repository
+ $ git clone https://github.com/mesquini/pokedex
+ 
+> cd pokedex
+> yarn install
+> yarn start
+ ```
+ 
+ ---
+
+Made with ♥ by Victor Mesquini :wave: [Get in touch!](https://www.linkedin.com/in/mesquini/)
+
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/

@@ -19,9 +19,12 @@ import steel from "../img/steel.png";
 import water from "../img/water.png";
 
 import "./type.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
 export default function LoadType({ type }) {
-  function teste() {
+  function selectType() {
     if (type.length === 2) {
       var t1 = searchType(type[0]);
       var t2 = searchType(type[1]);
@@ -76,11 +79,17 @@ export default function LoadType({ type }) {
     <>
       {type.length > 1 ? (
         <div className="types">
-          <img className='type' src={teste().t1} alt="type" />
-          <img className='type' src={teste().t2} alt="type" />
+          <OverlayTrigger overlay={<Tooltip> {type[0]}</Tooltip>}>
+            <img className="type" src={selectType().t1} alt="type" />
+          </OverlayTrigger>
+          <OverlayTrigger overlay={<Tooltip> {type[1]}</Tooltip>}>
+            <img className="type" src={selectType().t2} alt="type" />
+          </OverlayTrigger>
         </div>
       ) : (
-        <img className='type' src={teste()} alt="type" />
+        <OverlayTrigger overlay={<Tooltip> {type}</Tooltip>}>
+          <img className="type" src={selectType()} alt="type" />
+        </OverlayTrigger>
       )}
     </>
   );

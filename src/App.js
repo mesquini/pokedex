@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import api from "./server/index";
-import "./global.css";
 
+import logo from "./img/logo.png";
 import LoadType from "./components/type";
+import "./global.css";
 
 export default function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <div className="main-conteiner">
-      <h1>Pokedex da primeira geração</h1>
+      <img src={logo} alt="logo" />
       <ul>
         {pokemons.map(p => (
           <li key={p.id}>
@@ -26,7 +27,7 @@ export default function App() {
             <footer>
               <strong>{p.name}</strong>
               <p>Number: {p.num}</p>
-              <LoadType type={p.type} />
+              <p>Type:</p> <LoadType type={p.type} />
               <p>Weaknesses: {p.weaknesses.join(", ")}</p>
             </footer>
           </li>
