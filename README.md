@@ -1,3 +1,4 @@
+![App Screenshot](https://i1.wp.com/www.dimensaotech.com/wp-content/2016/08/pokemon_go_logo.png?resize=1000%2C300)
 <h1 align="center">Pokedex first generation</h1>
 <br />
 
