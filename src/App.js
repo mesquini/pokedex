@@ -4,6 +4,7 @@ import api from "./server/index";
 
 import logo from "./img/logo.png";
 import LoadType from "./components/type";
+
 import "./global.css";
 
 export default function App() {
