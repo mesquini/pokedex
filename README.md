@@ -7,6 +7,12 @@
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
+<p align="center">
+  <a href="https://pokedex-list.netlify.com/" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/mesquini/image/upload/v1580130380/demo_on_netlify_bbuvjz_gfadtn.png">
+  </a>
+</p>
+
 ## :rocket: Technologies
 
 This project was developed to studying JSON and React with the following technologies:
