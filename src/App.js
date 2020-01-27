@@ -7,7 +7,7 @@ import LoadType from "./components/type";
 
 import "./global.css";
 
-export default function App() {
+function App() {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -37,3 +37,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
