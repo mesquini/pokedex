@@ -9,6 +9,7 @@ html,
 body,
 #root {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -28,10 +29,16 @@ p {
   margin: 0 auto;
   text-align: center;
 }
+
+.main-conteiner .logo {
+  width: 100%;
+  max-width: 980px;
+}
+
 .main-conteiner ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 30px;
   margin-top: 50px;
 }
@@ -42,8 +49,7 @@ p {
   border-radius: 5px 5px 0 0;
 }
 
-.main-conteiner ul li .pokemon {
-  max-width: 50%;
+.main-conteiner ul li .pokemon {  
   margin: 5% 0% 5% 0%;
 }
 
@@ -60,8 +66,14 @@ p {
 strong {
   color: #000000;
 }
-input {
-  width: 80%;
+
+.main-conteiner .inputs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-conteiner .inputs .input {
+  width: 70%;
   border: 0;
   text-align: center;
   font-size: 16px;
@@ -70,6 +82,27 @@ input {
   height: 28px;
 }
 
+.main-conteiner .inputs .autoComplete{
+  width: 25%;
+}
+
 input::placeholder{
   color: #999;
+}
+
+@media (max-width: 546px) and (min-width: 480px) 
+{
+  .main-conteiner ul li{
+    margin: 25px;
+  }
+}
+
+@media (min-width: 546px) and (max-width: 765px) 
+{
+  .main-conteiner ul {
+    grid-gap: 0;
+  }
+  .main-conteiner ul li{
+    margin: 10px;
+  }
 }

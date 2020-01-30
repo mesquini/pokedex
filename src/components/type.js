@@ -19,7 +19,7 @@ import steel from "../img/steel.png";
 import water from "../img/water.png";
 
 import "./type.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
@@ -75,6 +75,7 @@ export default function LoadType({ type }) {
         return "";
     }
   }
+  
   return (
     <>
       {type.length > 1 ? (
