@@ -25,28 +25,24 @@ function App() {
     q ? pokemons.filter(p => p.name.indexOf(q) > -1) : pokemons;
 
   const selectedTypes = () => {
-    const arr = pokemons.map(p => p.type[0].toString());
-    const newArr = [...new Set(arr)];
-    return newArr;
+    let types = [];
+    pokemons.map(p =>
+      p.type.length === 2
+        ? [
+            !types.includes(p.type[0]) && types.push(p.type[0]),
+            !types.includes(p.type[1]) && types.push(p.type[1])
+          ]
+        : !types.includes(p.type[0]) && types.push(p.type[0])
+    );
+
+    //const newArr = [...new Set(arr)];
+    return types;
   };
 
   function filteredType(value) {
     if (value) {
-      /*const arr = pokemons.map(p => {
-        const a = p.type.map(t => t === value && t);
-        if (a[0] !== false && a[1] !== false) return p;
-      });*/
-      const arr = pokemons.map(p => {
-        if (p.type.length === 2) {
-          const bool = p.type[0] === value || p.type[1] === value;
-          return bool && p;
-        } else {
-          const bool = p.type[0] === value;
-          return bool && p;
-        }
-      });
-
-      const arrayPokemons = [...new Set(arr)].splice(1, arr.length);
+      const arr = pokemons.map(p => p.type.includes(value) && p);
+      const arrayPokemons = arr.filter(value => value !== false);
 
       setRollback(pokemons);
       setPokemons(arrayPokemons);
