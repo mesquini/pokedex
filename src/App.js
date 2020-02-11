@@ -83,28 +83,30 @@ function App() {
           )}
         />
       </div>
-      <ul>
-        {filteredPokemons().map(p => (
-          <Grow
-            in={true}
-            key={p.id}
-            style={{ transformOrigin: "0 0 0" }}
-            {...(true ? { timeout: 1000 } : {})}
-          >
-            <Paper elevation={4}>
-              <li>
-                <img className="pokemon" src={p.img} alt="pokemon" />
-                <footer>
-                  <strong>{p.name}</strong>
-                  <p>Number: {p.num}</p>
-                  <p>Type:</p> <LoadType type={p.type} />
-                  <p>Weaknesses: {p.weaknesses.join(", ")}</p>
-                </footer>
-              </li>
-            </Paper>
-          </Grow>
-        ))}
-      </ul>
+      <div className="list">
+        <ul>
+          {filteredPokemons().map(p => (
+            <Grow
+              in={true}
+              key={p.id}
+              style={{ transformOrigin: "0 0 0" }}
+              {...(true ? { timeout: 1000 } : {})}
+            >
+              <Paper elevation={4}>
+                <li>
+                  <img className="pokemon" src={p.img} alt="pokemon" />
+                  <footer>
+                    <strong>{p.name}</strong>
+                    <p>Number: {p.num}</p>
+                    <p>Type:</p> <LoadType type={p.type} />
+                    <p>Weaknesses: {p.weaknesses.join(", ")}</p>
+                  </footer>
+                </li>
+              </Paper>
+            </Grow>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

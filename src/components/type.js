@@ -20,8 +20,7 @@ import water from "../img/water.png";
 
 import "./type.css";
 
-
-import { Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Tooltip } from "@material-ui/core";
 
 export default function LoadType({ type }) {
   function selectType() {
@@ -75,22 +74,22 @@ export default function LoadType({ type }) {
         return "";
     }
   }
-  
+
   return (
     <>
       {type.length > 1 ? (
         <div className="types">
-          <OverlayTrigger overlay={<Tooltip> {type[0]}</Tooltip>}>
+          <Tooltip title={type[0]}>
             <img className="type" src={selectType().t1} alt="type" />
-          </OverlayTrigger>
-          <OverlayTrigger overlay={<Tooltip> {type[1]}</Tooltip>}>
+          </Tooltip>
+          <Tooltip title={type[1]}>
             <img className="type" src={selectType().t2} alt="type" />
-          </OverlayTrigger>
+          </Tooltip>
         </div>
       ) : (
-        <OverlayTrigger overlay={<Tooltip> {type}</Tooltip>}>
+        <Tooltip title={type}>
           <img className="type" src={selectType()} alt="type" />
-        </OverlayTrigger>
+        </Tooltip>
       )}
     </>
   );

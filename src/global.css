@@ -69,7 +69,7 @@ strong {
 
 .main-conteiner .inputs{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .main-conteiner .inputs .input {
@@ -90,19 +90,32 @@ input::placeholder{
   color: #999;
 }
 
-@media (max-width: 546px) and (min-width: 480px) 
+@media (max-width: 546px)
 {
-  .main-conteiner ul li{
-    margin: 25px;
+  .main-conteiner .list{
+    margin: 5px;
+  }
+  .main-conteiner ul {
+    grid-gap: 8px;
   }
 }
 
 @media (min-width: 546px) and (max-width: 765px) 
-{
-  .main-conteiner ul {
-    grid-gap: 0;
-  }
-  .main-conteiner ul li{
+{  
+  .main-conteiner .list{
     margin: 10px;
+  }
+  .main-conteiner ul {
+    grid-gap: 10px;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 1010px) 
+{  
+  .main-conteiner .list{
+    margin: 10px;
+  }
+  .main-conteiner ul {
+    grid-gap: 20px;
   }
 }
