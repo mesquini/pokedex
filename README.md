@@ -1,5 +1,5 @@
 ![App Screenshot](https://i1.wp.com/www.dimensaotech.com/wp-content/2016/08/pokemon_go_logo.png?resize=1000%2C300)
-<h1 align="center">Pokedex first generation</h1>
+<h1 align="center">Pokedex: First Generation</h1>
 <br />
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://pokedex-list.netlify.com/" target="_blank">
+  <a href="https://pokedex-mesquini.netlify.com/" title="Pokedex" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/mesquini/image/upload/v1580130380/demo_on_netlify_bbuvjz_gfadtn.png">
   </a>
 </p>
